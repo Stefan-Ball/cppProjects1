@@ -1,0 +1,128 @@
+\documentclass{article}
+\usepackage{ShumanNotes}
+\title{Title}
+\author{Stefan Ball}
+\date{\today}
+\setlength{\parindent}{0pt}
+\pdfpagewidth 8.5in
+\pdfpageheight 11in
+
+
+\begin{document}
+\maketitle
+
+\section*{Pseudocode}
+
+Some functions to have:
+ start-calculator();
+ is-positive-int();
+ is-positive-float();
+ is-in-range();
+ calculate-lab-average();
+ calculate-recitation-average ();
+
+
+main function()
+beg:
+   Would you like to calculate an average for 1) Labs, 2) asssignments, 3) tests, 4) recitations, 5) the class, or 0) to quit?
+   input x
+      switch (x)
+         case 0
+            quit
+         case 1
+            double labs = function labs/assignments/tests(lab-average)
+            Print "Your average is " lab-average
+            break
+	 case 2
+	    double assignments = function labs/assignments/tests(assignment-average)
+	    Print "Your average is " assignment-average
+	    break
+	 case 3
+	    double tests = function labs/assignments/tests(test-average)
+	    print "Your average is " test-average
+	    break
+	 case 4
+	    double recitation-average = recitation(recitation-average)
+	    print "Your average is " recitation-average
+	    break
+         case 5
+	    print "Enter lab, assignment, recitation, and test weight
+            double class = function class-average(lab-average, assignment-average, test-average, recitation-average)
+            print "Your class average is " class
+            break
+         default
+            goto beg
+
+
+function labs/assignments/tests()
+   print "How many " x " in the class?
+   input = stuff-number
+   print "Do the point values vary? 1) yes, 2) no"
+   input yn
+   switch (yn)
+      case 1
+         same-average()
+      case 2
+         different-average()	     
+
+function recitation()
+   Print "Enter quiz weight"
+   input quiz-weight
+   quiz = labs/assignments/tests()
+   Print "Enter design weight"
+   input design-weight
+   design = labs/assignments/tests()
+   Print "Enter critique weight"
+   critique = labs/assignments/tests()
+   input critique-weight
+   return 100*(critique*critique-weight)(quiz*quiz-weight)(design*design-weight)
+
+
+function same-average(x)
+   if x = 1
+      z = lab
+      g = lab-average
+   if x = 2
+      z = assignment
+      g = assignment-average
+   if x = 3
+      z = test
+      g = test-average
+   Print "How many points is each " z " worth?"
+   input points
+   for (i=1; i <= stuff-number; i++)
+      Print "Enter points for each" z 
+      input earned
+      numerator += earned
+   denominator = stuff-number*points
+   return 100*(numerator/denominator)
+
+
+function different-average()
+   for (i=1; i <= stuff-number; i++)
+      Print "How many points is " x " " i " worth?"
+      input y
+      denominator += y
+      Print "How many points did you get on " x " " i "?"
+      input y
+      numerator += y
+   return 100*(numerator/denominator)
+
+
+function class-average(x, y, z, q)
+   Print "Enter recitation weight"
+   input recitation-weight
+   Print "Enter test weight"
+   input test-weight
+   Print "Enter lab weight"
+   input lab-weight
+   Print "Enter assignment weight"
+   input assignment-weight
+   return (lab-weight)*x + y*(assignment-average) + z*(test-average) + q*(recitation-average)
+
+
+
+
+   %\centerimage{\includegraphics[width = 6in]{./images/q10.pdf}}{The peripherals lost for use can be found by comparing figure 2.3 on page 21 and figure 2.1 on page 18.}{Question10}
+   %\clearpage
+   \end{document}

@@ -1,0 +1,5 @@
+noun dog
+adjective good
+verb type
+verb running
+noun dogs
